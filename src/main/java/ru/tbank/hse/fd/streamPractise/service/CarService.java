@@ -115,7 +115,6 @@ public class CarService {
     public Boolean checkCarOwnerName(List<Car> cars) {
         return cars.stream().filter(car -> car.getCondition() == Condition.USED).flatMap(car -> car.getOwners().stream()).anyMatch(owner -> owner.getName().equals("Adam"));
     }
-
     /**
      * Приходит список Car
      * Необходимо вернуть любого Owner старше 36 лет
